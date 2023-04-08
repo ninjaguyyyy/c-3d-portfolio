@@ -1,7 +1,7 @@
 import 'styles/global.scss';
 
-import Layout from 'components/pages/Layout';
 import RoutesConfig from 'RoutesConfig';
+import Layout from 'components/pages/Layout';
 
 function App() {
   return (
