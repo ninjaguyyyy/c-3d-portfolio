@@ -2,60 +2,39 @@
 @import 'mixins';
 
 // Declare fonts
-@font-face {
-  font-family: $brand-logo-font;
-  font-weight: 400;
-  src: url('../assets/fonts/paytone-one/PaytoneOne-Regular.ttf');
-}
-
-@font-face {
-  font-family: $primary-font;
-  font-weight: 900;
-  src: url('../assets/fonts/fira-sans/FiraSans-Black.ttf');
-}
-
-@font-face {
-  font-family: $primary-font;
-  font-weight: 700;
-  src: url('../assets/fonts/fira-sans/FiraSans-Bold.ttf');
-}
-
-@font-face {
-  font-family: $primary-font;
-  font-weight: 300;
-  src: url('../assets/fonts/fira-sans/FiraSans-Light.ttf');
-}
-
-@font-face {
-  font-family: $primary-font;
-  font-weight: 400;
-  src: url('../assets/fonts/fira-sans/FiraSans-Regular.ttf');
-}
-
-@font-face {
-  font-family: $primary-font;
-  font-weight: 500;
-  src: url('../assets/fonts/fira-sans/FiraSans-Medium.ttf');
-}
-
-@font-face {
-  font-family: $primary-font;
-  font-weight: 100;
-  src: url('../assets/fonts/fira-sans/FiraSans-Thin.ttf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html,
 body {
   font-family: $primary-font;
 }
 
+// Text
+.text-gray {
+  color: $gray-color;
+}
+
 // Backgrounds
+.black-bg {
+  background: $black-color;
+}
+
 .blue-bg {
   background: $blue-color;
 }
 
 .white-bg {
   background: $white-color;
+}
+
+.black-gradient {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 // Customizes --------------------

@@ -1,19 +1,59 @@
-import BrandLogo from 'components/atoms/BrandLogo';
-import SignInButton from 'components/atoms/SignInButton';
-import SearchArea from 'components/molecules/SearchArea';
-import SocialIconButtons from 'components/molecules/SocialIconButtons';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import './index.scss';
+import clogo from 'assets/c-logo.svg';
+import DesktopMenuList from 'components/molecules/DesktopMenuList';
+import MobileMenuList from 'components/molecules/MobileMenuList';
 
-const Header = () => (
-  <header>
-    <div className="header white-bg flex justify-between items-center xs:mt-0">
-      <BrandLogo className="grow" />
-      <SearchArea className="mr-4 xs:mr-0" />
-      <SignInButton className="mr-8 xs:hidden" />
-      <SocialIconButtons className="xs:hidden" />
-    </div>
-  </header>
-);
+const Header = () => {
+  const [activatedMenuItem, setActivatedMenuItem] = useState('');
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleClickLogo = () => {
+    setActivatedMenuItem('');
+    window.scrollTo(0, 0);
+  };
+
+  return (
+    <nav
+      className={`sm:px-16 px-6 w-full flex items-center py-5 fixed top-0 z-20 
+      ${scrolled ? 'bg-primary' : 'bg-transparent'}`}>
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+        <Link to="/work" className="flex items-center gap-2" onClick={handleClickLogo}>
+          <img src={clogo} alt="logo" className="w-9 h-9 object-contain" />
+          <p className="text-white text-[18px] font-bold cursor-pointer flex ">
+            Chi Nguyen &nbsp;
+            <span className="sm:block hidden"> | JavaScript Developer</span>
+          </p>
+        </Link>
+
+        <DesktopMenuList
+          activatedMenuItem={activatedMenuItem}
+          onActivateMenuItem={setActivatedMenuItem}
+        />
+
+        <MobileMenuList
+          activatedMenuItem={activatedMenuItem}
+          onActivateMenuItem={setActivatedMenuItem}
+        />
+      </div>
+    </nav>
+  );
+};
 
 export default Header;
