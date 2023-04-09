@@ -1,3 +1,9 @@
+import Hero from 'components/organisms/Hero';
+
 export default function HomePage() {
-  return <div>Home Page</div>;
+  return (
+    <div>
+      <Hero />
+    </div>
+  );
 }
