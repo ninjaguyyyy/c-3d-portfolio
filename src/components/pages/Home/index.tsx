@@ -1,4 +1,5 @@
 import About from 'components/organisms/About';
+import Contact from 'components/organisms/Contact';
 import Experience from 'components/organisms/Experience';
 import Hero from 'components/organisms/Hero';
 import Tech from 'components/organisms/Tech';
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Experience />
       <Tech />
       <Work />
+      <Contact />
     </div>
   );
 }

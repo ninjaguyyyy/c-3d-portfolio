@@ -1,5 +1,3 @@
-import html from 'assets/tech/html.png';
-import css from 'assets/tech/css.png';
 import javascript from 'assets/tech/javascript.png';
 import typescript from 'assets/tech/typescript.png';
 import reactjs from 'assets/tech/reactjs.png';
@@ -15,14 +13,6 @@ import nextjs from 'assets/tech/nextjs.png';
 import cocos from 'assets/tech/cocos.png';
 
 export const TECHNOLOGIES = [
-  {
-    name: 'HTML 5',
-    icon: html
-  },
-  {
-    name: 'CSS 3',
-    icon: css
-  },
   {
     name: 'JavaScript',
     icon: javascript
