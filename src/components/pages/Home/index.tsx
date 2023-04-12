@@ -2,6 +2,7 @@ import About from 'components/organisms/About';
 import Experience from 'components/organisms/Experience';
 import Hero from 'components/organisms/Hero';
 import Tech from 'components/organisms/Tech';
+import Work from 'components/organisms/Work';
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
       <About />
       <Experience />
       <Tech />
+      <Work />
     </div>
   );
 }
