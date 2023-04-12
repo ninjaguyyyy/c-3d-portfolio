@@ -23,6 +23,8 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-router-dom": "6.4.4",
+    "react-tilt": "^1.0.2",
+    "react-vertical-timeline-component": "^3.6.0",
     "three": "^0.151.3"
   },
   "devDependencies": {
@@ -39,6 +41,7 @@
     "@types/loadable__component": "5.13.4",
     "@types/react": "18.0.24",
     "@types/react-dom": "18.0.8",
+    "@types/react-vertical-timeline-component": "^3.3.3",
     "@typescript-eslint/eslint-plugin": "5.44.0",
     "@typescript-eslint/parser": "5.44.0",
     "@vitejs/plugin-react": "2.2.0",
