@@ -32,15 +32,14 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_9uz9gjl',
-        'template_fxarsek',
+        import.meta.env.VITE_EMAIL_JS_SERVICE_ID as string,
+        import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID as string,
         {
-          to_name: 'Chi Nguyen',
           from_email: form.email,
-          to_email: 'nguyenhuuchi3006@gmail.com',
+          to_email: import.meta.env.VITE_EMAIL_JS_TO_EMAIL,
           message: form.message
         },
-        'Nimfp5lKEtopIbi3R'
+        import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY
       )
       .then(
         () => {
