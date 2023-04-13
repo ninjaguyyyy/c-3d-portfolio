@@ -22,10 +22,12 @@ const About = () => {
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-gray text-[17px] max-w-3xl leading-[30px]">
-        I am a skilled software developer with experience in TypeScript and JavaScript, and
-        expertise in frameworks like React, Node.js, and Three.js. I am a quick learner and
-        collaborate closely with clients to create efficient, scalable, and user-friendly solutions
-        that solve real-world problems. Let&apos;s work together to bring your ideas to life!
+        I am a junior software engineer with understanding a solid foundation of knowledge about
+        structured data, algorithms and programming methods. Besides, I can use some programing
+        languages and frameworks to build some kinds of applications like desktop app or web app.{' '}
+        <br />
+        Learning new languages and technologies is what I am passionate about. I am considered a
+        team-player because I like to share each other and tend to work well within the group.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-24 justify-center">
