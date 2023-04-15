@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet';
+
 import About from 'components/organisms/About';
 import Contact from 'components/organisms/Contact';
 import Experience from 'components/organisms/Experience';
@@ -7,13 +9,19 @@ import Work from 'components/organisms/Work';
 
 export default function HomePage() {
   return (
-    <div>
-      <Hero />
-      <About />
-      <Experience />
-      <Tech />
-      <Work />
-      <Contact />
-    </div>
+    <>
+      <Helmet>
+        <title>Chi Nguyen Portfolio</title>
+      </Helmet>
+
+      <div>
+        <Hero />
+        <About />
+        <Experience />
+        <Tech />
+        <Work />
+        <Contact />
+      </div>
+    </>
   );
 }
